@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="control/libraries/formas/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+</head>
+<body onload="buscar()">
+<script type="text/javascript">
+function buscar() {
+//	   	e.preventDefault();
+		jQuery.ajax({
+			url : 'http://motosyaccesorios.com.mx/ajaxfiles/enviar.php?',
+			contentType:"application/json; charset=utf-8",
+			type: "get",
+		data: {
+			   destino: "lcflores2000@gmail.com",
+			   mensaje: "Mensaje para el correo"
+		},			
+		success: function(lista) {
+			alert(Lista);
+		}
+	});
+		     	
+};	
+</script>
+</body>
+</html>
